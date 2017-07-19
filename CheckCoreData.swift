@@ -217,7 +217,7 @@ extension MomXML: Equatable {
 //  NSAttributeDescription+MomXML.swift
 //  MomXML
 //
-//  Created by anass TALII on 09/06/2017.
+//  Created by Eric Marchand on 09/06/2017.
 //  Copyright © 2017 phimage. All rights reserved.
 //
 
@@ -289,7 +289,7 @@ extension NSAttributeType {
 //  NSEntityDescription+MomXML.swift
 //  MomXML
 //
-//  Created by anass TALII on 09/06/2017.
+//  Created by Eric Marchand on 09/06/2017.
 //  Copyright © 2017 phimage. All rights reserved.
 //
 
@@ -327,7 +327,7 @@ extension NSEntityDescription {
 //  NSManagedObjectModel+MomXML.swift
 //  MomXML
 //
-//  Created by anass talii on 09/06/2017.
+//  Created by Eric Marchand on 09/06/2017.
 //  Copyright © 2017 phimage. All rights reserved.
 //
 
@@ -363,7 +363,7 @@ extension NSManagedObjectModel {
 //  NSRelationshipDescription+MomXML.swift
 //  MomXML
 //
-//  Created by anass talii on 09/06/2017.
+//  Created by Eric Marchand on 09/06/2017.
 //  Copyright © 2017 phimage. All rights reserved.
 //
 
@@ -428,8 +428,8 @@ extension NSDeleteRule {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
-//  Copyright © 2017 anass talii. All rights reserved.
+//  Created by Eric Marchand on 07/06/2017.
+//  Copyright © 2017 Eric Marchand. All rights reserved.
 //
 
 import Foundation
@@ -468,8 +468,8 @@ extension MomAttribute: XMLObject {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
-//  Copyright © 2017 anass talii. All rights reserved.
+//  Created by Eric Marchand on 07/06/2017.
+//  Copyright © 2017 Eric Marchand. All rights reserved.
 //
 
 import Foundation
@@ -499,8 +499,8 @@ extension MomElement: XMLObject {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
-//  Copyright © 2017 anass talii. All rights reserved.
+//  Created by Eric Marchand on 07/06/2017.
+//  Copyright © 2017 Eric Marchand. All rights reserved.
 //
 
 import Foundation
@@ -541,8 +541,8 @@ extension MomEntity: XMLObject {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
-//  Copyright © 2017 anass talii. All rights reserved.
+//  Created by Eric Marchand on 07/06/2017.
+//  Copyright © 2017 Eric Marchand. All rights reserved.
 //
 
 import Foundation
@@ -582,8 +582,8 @@ extension MomModel: XMLObject {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
-//  Copyright © 2017 anass talii. All rights reserved.
+//  Created by Eric Marchand on 07/06/2017.
+//  Copyright © 2017 Eric Marchand. All rights reserved.
 //
 
 import Foundation
@@ -632,8 +632,8 @@ extension MomRelationship: XMLObject {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
-//  Copyright © 2017 anass talii. All rights reserved.
+//  Created by Eric Marchand on 07/06/2017.
+//  Copyright © 2017 Eric Marchand. All rights reserved.
 //
 
 import Foundation
@@ -676,7 +676,7 @@ extension MomUserInfoEntry: XMLObject {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
+//  Created by Eric Marchand on 07/06/2017.
 //  Copyright © 2017 phimage. All rights reserved.
 //
 
@@ -707,8 +707,8 @@ extension MomXML: XMLObject {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
-//  Copyright © 2017 anass talii. All rights reserved.
+//  Created by Eric Marchand on 07/06/2017.
+//  Copyright © 2017 Eric Marchand. All rights reserved.
 //
 
 import Foundation
@@ -764,8 +764,8 @@ extension MomAttribute.AttributeType: XMLConvertible {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
-//  Copyright © 2017 anass talii. All rights reserved.
+//  Created by Eric Marchand on 07/06/2017.
+//  Copyright © 2017 Eric Marchand. All rights reserved.
 //
 
 import Foundation
@@ -785,8 +785,8 @@ extension MomElement: XMLConvertible {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
-//  Copyright © 2017 anass talii. All rights reserved.
+//  Created by Eric Marchand on 07/06/2017.
+//  Copyright © 2017 Eric Marchand. All rights reserved.
 //
 
 import Foundation
@@ -825,8 +825,8 @@ extension MomEntity: XMLConvertible {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
-//  Copyright © 2017 anass talii. All rights reserved.
+//  Created by Eric Marchand on 07/06/2017.
+//  Copyright © 2017 Eric Marchand. All rights reserved.
 //
 
 import Foundation
@@ -873,8 +873,8 @@ extension MomModel: XMLConvertible {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
-//  Copyright © 2017 anass talii. All rights reserved.
+//  Created by Eric Marchand on 07/06/2017.
+//  Copyright © 2017 Eric Marchand. All rights reserved.
 //
 
 import Foundation
@@ -928,8 +928,8 @@ extension MomRelationship.DeletionRule: XMLConvertible {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
-//  Copyright © 2017 anass talii. All rights reserved.
+//  Created by Eric Marchand on 07/06/2017.
+//  Copyright © 2017 Eric Marchand. All rights reserved.
 //
 
 import Foundation
@@ -967,7 +967,7 @@ extension MomUserInfoEntry: XMLConvertible {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
+//  Created by Eric Marchand on 07/06/2017.
 //  Copyright © 2017 phimage. All rights reserved.
 //
 
@@ -1634,7 +1634,7 @@ extension Bool: XMLElementDeserializable, XMLAttributeDeserializable {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
+//  Created by Eric Marchand on 07/06/2017.
 //  Copyright © 2017 phimage. All rights reserved.
 //
 
@@ -1666,8 +1666,8 @@ extension String {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
-//  Copyright © 2017 anass talii. All rights reserved.
+//  Created by Eric Marchand on 07/06/2017.
+//  Copyright © 2017 Eric Marchand. All rights reserved.
 //
 
 import Foundation
@@ -1720,8 +1720,8 @@ public struct MomAttribute {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
-//  Copyright © 2017 anass talii. All rights reserved.
+//  Created by Eric Marchand on 07/06/2017.
+//  Copyright © 2017 Eric Marchand. All rights reserved.
 //
 
 import Foundation
@@ -1751,8 +1751,8 @@ public struct MomElement {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
-//  Copyright © 2017 anass talii. All rights reserved.
+//  Created by Eric Marchand on 07/06/2017.
+//  Copyright © 2017 Eric Marchand. All rights reserved.
 //
 
 import Foundation
@@ -1787,8 +1787,8 @@ public struct MomEntity {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
-//  Copyright © 2017 anass talii. All rights reserved.
+//  Created by Eric Marchand on 07/06/2017.
+//  Copyright © 2017 Eric Marchand. All rights reserved.
 //
 
 import Foundation
@@ -1836,8 +1836,8 @@ extension MomModel {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
-//  Copyright © 2017 anass talii. All rights reserved.
+//  Created by Eric Marchand on 07/06/2017.
+//  Copyright © 2017 Eric Marchand. All rights reserved.
 //
 
 import Foundation
@@ -1891,8 +1891,8 @@ extension MomRelationship {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
-//  Copyright © 2017 anass talii. All rights reserved.
+//  Created by Eric Marchand on 07/06/2017.
+//  Copyright © 2017 Eric Marchand. All rights reserved.
 //
 
 import Foundation
@@ -1930,7 +1930,7 @@ public struct MomUserInfoEntry {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
+//  Created by Eric Marchand on 07/06/2017.
 //  Copyright © 2017 phimage. All rights reserved.
 //
 
@@ -1954,8 +1954,8 @@ public struct MomXML {
 //
 // ----------------------------
 
-//  Created by anass talii on 07/06/2017.
-//  Copyright © 2017 anass talii. All rights reserved.
+//  Created by Eric Marchand on 07/06/2017.
+//  Copyright © 2017 Eric Marchand. All rights reserved.
 //
 
 import Foundation
@@ -1981,7 +1981,7 @@ extension Bool: XMLConvertible {
 //  MomXMLTests.swift
 //  MomXMLTests
 //
-//  Created by anass talii on 07/06/2017.
+//  Created by Eric Marchand on 07/06/2017.
 //  Copyright © 2017 phimage. All rights reserved.
 //
 
@@ -5532,7 +5532,7 @@ func findFile(rootPath: String, suffix: String) -> [String]? {
 //  main.swift
 //  JSONToCoreData
 //
-//  Created by anass talii on 07/06/2017.
+//  Created by Anass TALII on 07/06/2017.
 //  Copyright © 2017 phimage. All rights reserved.
 //
 
@@ -5565,11 +5565,62 @@ for filePath in filePaths {
             print("Failed to parse \(url)")
             exit(1)
         }
-
-        // Here check mom xml is correct ie. 1/ there is entity, element
-        // 2/ same count of entity and element
-        // 3/ there is attribute in entity
-        // 4/ other idea
+        print("---- file loaded")
+        
+        // same count of entity and element
+        if(parsedMom.model.entities.count == parsedMom.model.elements.count){
+            print("+++ number entites is equals number element")
+        }else {
+            print("--- number entites is not equals number element")
+        }
+        
+        // Here check mom xml is correct
+        if (parsedMom.model.check()){
+            print("is check")
+        }
+        
+        // there is entity, element
+        if (parsedMom.model.entities.count == 0){
+            print("No entity was found")
+        }else {
+            //check attribute found
+            parsedMom.model.entities.forEach{
+                if($0.attributes.count == 0 ){
+                     print("No attribut was found")
+                }
+            }
+        }
+        
+        if (parsedMom.model.elements.count == 0){
+            print("No elements was found")
+        }
+        
+        // there is  element name equal entite name
+        var find = 0
+        for i in 0 ... parsedMom.model.elements.count-1 {
+            for j in 0 ... parsedMom.model.entities.count-1 {
+                if (parsedMom.model.elements[i].name == parsedMom.model.entities[j].name){
+                    find = find + 1
+                }
+            }
+        }
+        if(find != parsedMom.model.elements.count)
+        {
+            print("element name not correspond in entity name")
+        }else {
+            print("some element name correspond in some entity name")
+        }
+        
+        //Convert inverse
+        guard let myXML = MomXML(xml: SWXMLHash.parse(parsedMom.xml)) else {
+            print("Failed to parse \(url)")
+            exit(1)
+        }
+        
+        if (myXML.model.check()){
+            print("is check")
+        }
+        
     } catch {
         print("Failed to read \(url): \(error)")
         exit(1)

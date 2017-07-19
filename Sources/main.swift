@@ -36,6 +36,7 @@ for filePath in filePaths {
             exit(1)
         }
         print("---- file loaded")
+        
         // same count of entity and element
         if(parsedMom.model.entities.count == parsedMom.model.elements.count){
             print("+++ number entites is equals number element")
@@ -47,25 +48,37 @@ for filePath in filePaths {
         if (parsedMom.model.check()){
             print("is check")
         }
+        
         // there is entity, element
-        if (parsedMom.model.entities.count == 3){
-            // there is attribute in entity
-            print("---------- Entities :")
-            parsedMom.model.entities.forEach {
-                print("\($0.name)")
-                $0.attributes.forEach { print("\($0.name) : \($0.attributeType)") }
+        if (parsedMom.model.entities.count == 0){
+            print("No entity was found")
+        }else {
+            //check attribute found
+            parsedMom.model.entities.forEach{
+                if($0.attributes.count == 0 ){
+                     print("No attribut was found")
+                }
             }
         }
-        // there is  element
-        if (parsedMom.model.elements.count == 3){
-            print("---------- Elements :")
-            print(parsedMom.model.elements[0].name)
-            print(parsedMom.model.elements[1].name)
-            print(parsedMom.model.elements[2].name)
-            parsedMom.model.elements.forEach {
-                print("\($0.name)")
+        
+        if (parsedMom.model.elements.count == 0){
+            print("No elements was found")
+        }
+        
+        // there is  elements name equal entities name
+        var find = 0
+        for i in 0 ... parsedMom.model.elements.count-1 {
+            for j in 0 ... parsedMom.model.entities.count-1 {
+                if (parsedMom.model.elements[i].name == parsedMom.model.entities[j].name){
+                    find = find + 1
+                }
             }
-
+        }
+        if(find != parsedMom.model.elements.count)
+        {
+            print("element name not correspond in entity name")
+        }else {
+            print("some element name correspond in some entity name")
         }
         
         //Convert inverse
@@ -73,10 +86,10 @@ for filePath in filePaths {
             print("Failed to parse \(url)")
             exit(1)
         }
+        
         if (myXML.model.check()){
             print("is check")
         }
-        
         
     } catch {
         print("Failed to read \(url): \(error)")
