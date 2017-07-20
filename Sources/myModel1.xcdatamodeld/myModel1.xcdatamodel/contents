@@ -11,6 +11,7 @@
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="maDescription" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class"/>
     <entity name="Produit" representedClassName="Produit" syncable="YES" codeGenerationType="class">
         <attribute name="cassable" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -20,7 +21,8 @@
     </entity>
     <elements>
         <element name="Client" positionX="-63" positionY="-18" width="128" height="105"/>
-        <element name="Produit" positionX="-54" positionY="-9" width="128" height="120"/>
         <element name="Commande" positionX="-36" positionY="9" width="128" height="90"/>
+        <element name="Produit" positionX="-54" positionY="-9" width="128" height="120"/>
+        <element name="Entity" positionX="-45" positionY="27" width="128" height="45"/>
     </elements>
 </model>

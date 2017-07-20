@@ -5538,13 +5538,18 @@ func findFile(rootPath: String, suffix: String) -> [String]? {
 
 import Foundation
 #if IMPORT
-import MomXML
-import SWXMLHash
+    import MomXML
+    import SWXMLHash
 #endif
 if CommandLine.arguments.count == 1 {
-    print("Invalid usage. Missing path to storyboard files")
+    print("Invalid usage. Missing path to .xcadatamodel files")
     exit(1)
 }
+
+var myDict: [String: Any] = ["success": "true"]
+var myDicAllFiles:[Any] = []
+var item = 0
+var valSuccess = true
 
 let argument = CommandLine.arguments[1]
 var filePaths: [String] = []
@@ -5556,46 +5561,46 @@ if argument.hasSuffix(suffix) {
 }
 
 for filePath in filePaths {
+    
     var url = URL(fileURLWithPath: filePath)
+    var myError: [String] = []
     url = url.appendingPathComponent("contents")
     do {
         let xmlString = try String(contentsOf: url)
         let xml = SWXMLHash.parse(xmlString)
         guard let parsedMom = MomXML(xml: xml) else {
-            print("Failed to parse \(url)")
-            exit(1)
+            myError.append("Failed to parse \(url)")
+            break
         }
-        print("---- file loaded")
+        //myError.add("file loaded")
         
         // same count of entity and element
-        if(parsedMom.model.entities.count == parsedMom.model.elements.count){
-            print("+++ number entites is equals number element")
-        }else {
-            print("--- number entites is not equals number element")
+        if(parsedMom.model.entities.count != parsedMom.model.elements.count){
+            myError.append("number entities is not equals number element")
         }
         
         // Here check mom xml is correct
-        if (parsedMom.model.check()){
-            print("is check")
+        if (!parsedMom.model.check()){
+            myError.append("model is not checked")
         }
         
         // there is entity, element
         if (parsedMom.model.entities.count == 0){
-            print("No entity was found")
+            myError.append("No entity was found")
         }else {
             //check attribute found
             parsedMom.model.entities.forEach{
                 if($0.attributes.count == 0 ){
-                     print("No attribut was found")
+                    myError.append("No attribute was found in '\($0.name)'")
                 }
             }
         }
         
         if (parsedMom.model.elements.count == 0){
-            print("No elements was found")
+            myError.append("No elements was found")
         }
         
-        // there is  element name equal entite name
+        // there is  elements name equal entities name
         var find = 0
         for i in 0 ... parsedMom.model.elements.count-1 {
             for j in 0 ... parsedMom.model.entities.count-1 {
@@ -5606,26 +5611,49 @@ for filePath in filePaths {
         }
         if(find != parsedMom.model.elements.count)
         {
-            print("element name not correspond in entity name")
-        }else {
-            print("some element name correspond in some entity name")
+            myError.append("element name not correspond in entity name")
         }
         
         //Convert inverse
         guard let myXML = MomXML(xml: SWXMLHash.parse(parsedMom.xml)) else {
-            print("Failed to parse \(url)")
-            exit(1)
+            myError.append("Failed to parse inverse \(url)")
+            break
         }
         
-        if (myXML.model.check()){
-            print("is check")
+        if (!myXML.model.check()){
+            myError.append("model is not checked from inverse methode")
         }
         
     } catch {
-        print("Failed to read \(url): \(error)")
+        myError.append("Failed to read \(url): \(error)")
         exit(1)
     }
+    var myDictFile: [String:Any] = [:]
+    let filename = filePath.components(separatedBy: "/")
+    myDictFile["name"] = filename[filename.count-1]
+    if(myError.count != 0){
+        valSuccess = false
+        if(myError.count > 0) {
+            myDictFile["error"] = myError
+            myDictFile["success"] = false
+        }
+        myDicAllFiles.append(myDictFile)
+    } else {
+        myDictFile["message"] = "CoreData model is correct"
+        myDictFile["success"] = true
+        myDicAllFiles.append(myDictFile)
+    }
+
 }
+if (myDict.count > 0) {
+    myDict["success"] = valSuccess
+    myDict["model"] = myDicAllFiles
+    if let jsonData = try? JSONSerialization.data( withJSONObject: myDict, options: []) {
+        let stringValue = String(data: jsonData, encoding: .utf8)
+        print(stringValue!)
+    }
+}
+
 
 exit(0)
 
