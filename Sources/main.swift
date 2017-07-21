@@ -18,7 +18,6 @@ if CommandLine.arguments.count == 1 {
 
 var myDict: [String: Any] = ["success": "true"]
 var myDicAllFiles:[Any] = []
-var item = 0
 var valSuccess = true
 
 let argument = CommandLine.arguments[1]
@@ -115,14 +114,12 @@ for filePath in filePaths {
     }
 
 }
-if (myDict.count > 0) {
-    myDict["success"] = valSuccess
-    myDict["model"] = myDicAllFiles
-    if let jsonData = try? JSONSerialization.data( withJSONObject: myDict, options: []) {
-        let stringValue = String(data: jsonData, encoding: .utf8)
-        print(stringValue!)
-    }
-}
 
+myDict["success"] = valSuccess
+myDict["model"] = myDicAllFiles
+if let jsonData = try? JSONSerialization.data( withJSONObject: myDict, options: []) {
+    let stringValue = String(data: jsonData, encoding: .utf8)
+    print(stringValue!)
+}
 
 exit(0)
