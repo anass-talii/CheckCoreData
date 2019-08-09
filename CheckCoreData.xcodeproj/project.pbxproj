@@ -40,6 +40,9 @@
 		482BE8B21EE93DD400BFD423 /* SWXMLHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 482BE8931EE93D2600BFD423 /* SWXMLHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		482BE8B51EE93DD900BFD423 /* MomXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482BE8911EE93D2100BFD423 /* MomXML.framework */; };
 		482BE8B61EE93DD900BFD423 /* MomXML.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 482BE8911EE93D2100BFD423 /* MomXML.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		48D4EB8822F32FDF006E1D29 /* MomFetchedProperty+XMLObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D4EB8722F32FDF006E1D29 /* MomFetchedProperty+XMLObject.swift */; };
+		48D4EB8A22F32FFD006E1D29 /* MomFetchedProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D4EB8922F32FFD006E1D29 /* MomFetchedProperty.swift */; };
+		48D4EB8C22F3300B006E1D29 /* MomFetchedProperty+XMLConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D4EB8B22F3300B006E1D29 /* MomFetchedProperty+XMLConvertible.swift */; };
 		FE7AC1E31F1CAE2A004CD42B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FE7AC1E21F1CAE2A004CD42B /* LICENSE */; };
 		FE7AC1E51F1CAEDC004CD42B /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FE7AC1E41F1CAEDC004CD42B /* README.md */; };
 /* End PBXBuildFile section */
@@ -102,6 +105,9 @@
 		484F8EBB1EE83FDD00C854AA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		484F8F431EE8578400C854AA /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		485493E41EF2BF8500FDD396 /* CheckCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCoreData.swift; sourceTree = "<group>"; };
+		48D4EB8722F32FDF006E1D29 /* MomFetchedProperty+XMLObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MomFetchedProperty+XMLObject.swift"; sourceTree = "<group>"; };
+		48D4EB8922F32FFD006E1D29 /* MomFetchedProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomFetchedProperty.swift; sourceTree = "<group>"; };
+		48D4EB8B22F3300B006E1D29 /* MomFetchedProperty+XMLConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MomFetchedProperty+XMLConvertible.swift"; sourceTree = "<group>"; };
 		FE7AC1E21F1CAE2A004CD42B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		FE7AC1E41F1CAEDC004CD42B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,6 +169,7 @@
 				480110511EEEB2730086ED62 /* MomElement+XMLObject.swift */,
 				480110521EEEB2730086ED62 /* MomEntity+XMLObject.swift */,
 				480110531EEEB2730086ED62 /* MomModel+XMLObject.swift */,
+				48D4EB8722F32FDF006E1D29 /* MomFetchedProperty+XMLObject.swift */,
 				480110541EEEB2730086ED62 /* MomRelationship+XMLObject.swift */,
 				480110551EEEB2730086ED62 /* MomUserInfo+XMLObject.swift */,
 				480110561EEEB2730086ED62 /* MomXML+XMLObject.swift */,
@@ -174,6 +181,7 @@
 		480110581EEEB2730086ED62 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				48D4EB8922F32FFD006E1D29 /* MomFetchedProperty.swift */,
 				480110591EEEB2730086ED62 /* MomAttribute.swift */,
 				4801105A1EEEB2730086ED62 /* MomElement.swift */,
 				4801105B1EEEB2730086ED62 /* MomEntity.swift */,
@@ -188,6 +196,7 @@
 		480110601EEEB2730086ED62 /* ToXML */ = {
 			isa = PBXGroup;
 			children = (
+				48D4EB8B22F3300B006E1D29 /* MomFetchedProperty+XMLConvertible.swift */,
 				480110611EEEB2730086ED62 /* MomAttribute+XMLConvertible.swift */,
 				480110621EEEB2730086ED62 /* MomElement+XMLConvertible.swift */,
 				480110631EEEB2730086ED62 /* MomEntity+XMLConvertible.swift */,
@@ -353,6 +362,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -402,8 +412,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				480110441EEEB22D0086ED62 /* SWXMLHash.swift in Sources */,
+				48D4EB8822F32FDF006E1D29 /* MomFetchedProperty+XMLObject.swift in Sources */,
 				4801106E1EEEB2730086ED62 /* MomUserInfo+XMLObject.swift in Sources */,
 				480110721EEEB2730086ED62 /* MomElement.swift in Sources */,
+				48D4EB8A22F32FFD006E1D29 /* MomFetchedProperty.swift in Sources */,
 				480110431EEEB22D0086ED62 /* SWXMLHash+TypeConversion.swift in Sources */,
 				480110751EEEB2730086ED62 /* MomRelationship.swift in Sources */,
 				4801107A1EEEB2730086ED62 /* MomEntity+XMLConvertible.swift in Sources */,
@@ -419,6 +431,7 @@
 				480110701EEEB2730086ED62 /* XMLObject.swift in Sources */,
 				4801106C1EEEB2730086ED62 /* MomModel+XMLObject.swift in Sources */,
 				4801107C1EEEB2730086ED62 /* MomRelationship+XMLConvertible.swift in Sources */,
+				48D4EB8C22F3300B006E1D29 /* MomFetchedProperty+XMLConvertible.swift in Sources */,
 				480110761EEEB2730086ED62 /* MomUserInfo.swift in Sources */,
 				4801107F1EEEB2730086ED62 /* XMLConvertible.swift in Sources */,
 				480110771EEEB2730086ED62 /* MomXML.swift in Sources */,
@@ -456,7 +469,7 @@
 					"$(PROJECT_DIR)/Carthage/Checkouts/SWXMLHash/Carthage/Build/Mac",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -472,7 +485,7 @@
 					"$(PROJECT_DIR)/Carthage/Checkouts/SWXMLHash/Carthage/Build/Mac",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -492,7 +505,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.phimage.JSONToCoreData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -512,7 +525,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.phimage.JSONToCoreData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
