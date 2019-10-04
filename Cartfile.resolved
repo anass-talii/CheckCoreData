@@ -1,3 +1,3 @@
 github "SwiftyJSON/SwiftyJSON" "5.0.0"
-github "drmohundro/SWXMLHash" "4.9.0"
-github "phimage/MomXML" "f5b77798de0c9003f43e67bcd2406ccf37df3b4c"
+github "drmohundro/SWXMLHash" "5.0.1"
+github "phimage/MomXML" "7ad04467823a0d53805021ec09f00642c6c575ad"
